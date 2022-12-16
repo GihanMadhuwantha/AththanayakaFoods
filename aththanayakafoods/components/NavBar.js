@@ -33,7 +33,7 @@ function NavBar() {
         </li>
         <li className="nav-item ">
             <Link href="/signin">
-            <a className={"nav-link" + isActive('/signin')}><i className="fas fa-user"></i>Sign in</a>
+            <a className={"nav-link" + isActive('/signin')}><i className="fas fa-user" aria-hidden="true"></i>Sign in</a>
             </Link>
           
         </li>
