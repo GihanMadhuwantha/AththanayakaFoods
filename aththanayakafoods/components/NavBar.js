@@ -7,7 +7,7 @@ import Cookie from 'js-cookie'
 function NavBar() {
   const router = useRouter()
   const {state, dispatch} = useContext(DataContext)
-  const { auth } = state
+  const { auth,cart } = state
 
 
 
@@ -52,7 +52,7 @@ const handleLogout = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <Link href="/">
-            <a className="navbar-brand" >Aththanayaka Foods</a>
+            <a className="navbar-brand" style={{color: "#334a8c" }}><h2><b>ATHTHANAYAKA FOODS</b></h2></a>
         </Link>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
@@ -60,10 +60,24 @@ const handleLogout = () => {
     <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
       <ul className="navbar-nav">
         <li className="nav-item ">
-            <Link href="/cart">
-            <a className={"nav-link" + isActive('/cart')}>
-              <i className="fas fa-shopping-cart"></i>Cart</a>
-            </Link>
+        <Link href="/cart">
+                            <a className={"nav-link" + isActive('/cart')}>
+                                <i className="fas fa-shopping-cart position-relative" aria-hidden="true">
+                                    <span className="position-absolute"
+                                    style={{
+                                        padding: '3px 6px',
+                                        background: '#ed143dc2',
+                                        borderRadius: '50%',
+                                        top: '-10px',
+                                        right: '-10px',
+                                        color: 'white',
+                                        fontSize: '14px'
+                                    }}>
+                                        {cart.length}
+                                    </span>
+                                </i> Cart
+                            </a>
+                        </Link>
           
         </li>
         {

@@ -6,7 +6,7 @@ module.exports = {
         "REFRESH_TOKEN_SECRET": "X!%rvjg^U7KF456*sXsf&qGCj9Cq^CIMk45cLRcVCU2kbVHs#+MrmzSIQ!p7",
         "PAYPAL_CLIENT_ID": "YOUR_PAYPAL_CLIENT_ID",
         "CLOUD_UPDATE_PRESET": "YOUR_CLOUD_UPDATE_PRESET",
-        "CLOUD_NAME": "YOUR_CLOUD_NAME",
-        "CLOUD_API": "YOUR_CLOUD_API"
+        "CLOUD_NAME": "afoods",
+        "CLOUD_API": "524996345779392"
     }
 }
