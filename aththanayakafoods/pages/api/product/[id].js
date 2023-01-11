@@ -14,10 +14,9 @@ export default async(req,res)=>{
 const getProduct = async (req, res) => {
     try {
         const { id } = req.query;
-        console.log("idsss "+req.query);
-
+        
         const product = await Products.findById(id)
-        console.log("sssssssss " +product);
+       
         if(!product) return res.status(400).json({err: 'This product does not exist.'})
         
         res.json({ product })

@@ -2,10 +2,14 @@ import { getData } from '../utils/fetchData'
 import { useState, useContext, useEffect } from 'react'
 import Head from 'next/head'
 import ProductItem from '../components/product/ProductItem'
+import HeroSection from '../components/HeroSection'
+
 const Home=(props)=>{
    const [products, setProducts] = useState(props.products)
    console.log(products)
 return(
+  <>
+  <HeroSection/>
 <div className="products">
       <Head>
         <title>Home Page</title>
@@ -19,7 +23,7 @@ return(
           ))
       }
 </div>
-
+</>
 )
 }
 export async function getServerSideProps() {
