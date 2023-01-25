@@ -43,3 +43,19 @@ const sold = async (id, quantity, oldInStock, oldSold) => {
         sold: quantity + oldSold
     })
 }
+const getOrders = async (req, res) => {
+    try {
+        const result = await auth(req, res)
+
+        let orders;
+        if(result.role !== 'admin'){
+            orders = await Orders.find({user: result.id}).populate("user", "-password")
+        }else{
+            orders = await Orders.find().populate("user", "-password")
+        }
+
+        res.json({orders})
+    } catch (err) {
+        return res.status(500).json({err: err.message})
+    }
+}
