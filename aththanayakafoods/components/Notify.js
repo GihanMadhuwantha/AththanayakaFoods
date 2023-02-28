@@ -2,10 +2,20 @@ import {useContext} from 'react'
 import {DataContext} from '../store/GlobalState'
 import Loading from './Loading'
 import Toast from './Toast'
+import {useEffect} from 'react'
+
 
 const Notify = () => {
     const {state, dispatch} = useContext(DataContext)
     const { notify } = state
+
+    useEffect(() => {
+        if (notify.success || notify.error) {
+            setTimeout(() => {
+                dispatch({ type: 'NOTIFY', payload: {} })
+            }, 3000)
+        }
+    }, [notify])
 
     return(
         <> 
@@ -28,6 +38,7 @@ const Notify = () => {
         </>
     )
 }
+
 
 
 export default Notify

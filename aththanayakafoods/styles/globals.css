@@ -1,3 +1,40 @@
 @import url("./loading.css");
 @import url("./product.css");
 @import url("./profile.css");
+/* Add a custom font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url("./products_manager.css");
+
+/* Apply the font to the text */
+.navbar-brand h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+/* Add padding and margin */
+.navbar-brand {
+  padding: 20px;
+  margin-right: 50px;
+}
+
+/* Change the text color */
+.navbar-brand h2 {
+  color: #334a8c;
+}
+
+/* Add a hover effect */
+.navbar-brand h2:hover {
+  color: #024b12;
+}
+
+/* Add a shadow */
+.navbar-brand h2 {
+  text-shadow: 2px 2px #ccc;
+}
+
+/* Use media queries to adjust font size for different screen sizes */
+@media (max-width: 768px) {
+  .navbar-brand h2 {
+    font-size: 1.2rem;
+  }
+}

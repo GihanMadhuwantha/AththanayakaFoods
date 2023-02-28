@@ -35,7 +35,7 @@ const paypalBtn = ({order}) => {
                  
                   
                   dispatch(updateItem(orders, order._id, {
-                    ...order, dateOfPayment:details.create_time.toISOString(),
+                    ...order,
                     paid: true,
                     paymentId: details.payer.payer_id, method: 'Paypal'
                   }, 'ADD_ORDERS'))

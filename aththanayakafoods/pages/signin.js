@@ -38,7 +38,7 @@ const signin=()=>{
 
         Cookie.set('refreshtoken', res.refresh_token, {
           path: 'api/auth/accessToken',
-          expires: 7
+          expires: 30
         })
         localStorage.setItem('firstLogin', true)
        
